@@ -14,7 +14,7 @@ int main()
     printf("Enter key:\n");
     scanf("%d",&key);
     result=linearsearch(a,n,key);
-    if(result!=1)
+    if(result!=-1)
         printf("Key is found at index %d",result);
     else 
         printf("Key is not found ");
@@ -29,7 +29,7 @@ int linearsearch(int a[],int n,int key)
         if(a[i]==key)
             return i;
     }
-    return 1;
+    return -1;
 }
 OUTPUT:
 a)Enter array size:

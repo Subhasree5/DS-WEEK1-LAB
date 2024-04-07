@@ -1,6 +1,23 @@
 // c program to implement binary search// 
 #include<stdio.h>
 int binarysearch(int[],int,int,int);
+int main()
+{
+    int a[5],n,i,key,result;
+    printf("Enter array size:\n");
+    scanf("%d",&n);
+    printf("Enter %d elements: \n",n);
+    for(i=0;i<n;i++)
+        scanf("%d",&a[i]);
+    printf("Enter key:");
+    scanf("%d",&key);
+    result=binarysearch(a,0,n-1,key);
+    if(result!=-1)
+        printf("Key is found at index:%d",result);
+    else
+        printf("Key is not found");
+    return 0;
+}
 int binarysearch(int a[],int low,int high,int key)
 {
     int mid,n;
@@ -19,26 +36,16 @@ int binarysearch(int a[],int low,int high,int key)
         }    
     }
 }
-int main()
-{
-    int a[5],n,i,key,result;
-    printf("Enter array size:\n");
-    scanf("%d",&n);
-    printf("Enter %d elements: \n",n);
-    for(i=0;i<n;i++)
-        scanf("%d",&a[i]);
-    printf("Enter key:");
-    scanf("%d",&key);
-    result=binarysearch(a,0,n-1,key);
-    if(result!=-1)
-        printf("Key is found at index:%d",result);
-    else
-        printf("Key is not found");
-}
 OUTPUT:
-Enter array size:
+a)Enter array size:
 5
-Enter 5 elemnts: 
+Enter 5 elements: 
 10 20 30 40 50
 Enter key:20
+Key is found at index:1
+b)Enter array size:
+5
+Enter 5 elements: 
+10 20 30 40 50
+Enter key:55
 Key is not found
